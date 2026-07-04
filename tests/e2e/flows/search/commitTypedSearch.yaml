@@ -1,0 +1,16 @@
+appId: "com.recipedia"
+---
+- runFlow:
+    when:
+      platform: Android
+    commands:
+      # Close dropdown, keep the typed filter on Android
+      - pressKey: back
+
+- runFlow:
+    when:
+      platform: iOS
+    commands:
+      - tapOn:
+          id: "Search"
+          label: "Tap keyboard Search key to commit the typed filter"
